@@ -1,5 +1,5 @@
 $color-1: #FFC12D;
-$color-2: #F9B718;
+$color-2: #C89210;
 $color-3: #A47503;
 $color-4: #97E411;
 $color-5: #7BC200;
@@ -10,12 +10,14 @@ $color-9: #D52E13;
 $color-10: #6FD9FC;
 $color-11: #47B4F6;
 $color-12: #0787D4;
-$color-13: #A39CDC;
+$color-13: #AACDF6;
 $color-14: #8781BD;
 $color-15: #5B568E;
-$color-16: #2C3E50;
-$color-17: #A1B1BC;
-$color-18: #E2E6E7;
+$color-16: #B18009;
+$color-17: #5B568E;
+$color-18: #2C3E50;
+$color-19: #A1B1BC;
+$color-20: #E2E6E7;
 
 * {
    margin: 0;
@@ -35,7 +37,7 @@ main {
 
 .box {
    padding: 42px 0 42px 49px;
-   border: 1px solid $color-18;
+   border: 1px solid $color-20;
    border-radius: 10px;
    display: flex;
    position: relative;
@@ -65,15 +67,16 @@ main {
        h3 {
            line-height: 8px;
            font-weight: 900;
-           color: $color-16;
+           color: $color-18;
            letter-spacing: 0.04px;
            margin-bottom: 16px
        }
        p {
            line-height: 24px;
-           color: $color-17;
+           color: $color-19;
        }
    }
+
    a{
        position: absolute;
        top: 16px;
@@ -87,12 +90,41 @@ main {
        }
    }
 
+   &.solid {
+       border: none;
+       background-color: $color-1;
+
+       p {
+           color: $color-18;
+       }
+
+       a {
+           &::before{
+               color: $color-16;
+           }
+       }
+   }
+
    &.check {
        &::before {
            content: "\f00c";
            background-color: $color-4;
            border: 7px solid $color-5;
            color: $color-6;
+       }
+
+       &.solid {
+           background-color: $color-4;
+
+           p {
+               color: $color-18;
+           }
+
+           a {
+               &::before{
+                   color: $color-6;
+               }
+           }
        }
    }
 
@@ -103,6 +135,20 @@ main {
            border: 7px solid $color-8;
            color: $color-9;
        }
+
+       &.solid {
+           background-color: $color-7;
+
+           p {
+               color: $color-18;
+           }
+
+           a {
+               &::before{
+                   color: $color-9;
+               }
+           }
+       }
    }
 
    &.flash {
@@ -111,6 +157,16 @@ main {
            background-color: $color-10;
            border: 7px solid $color-11;
            color: $color-12;
+       }
+
+       &.solid {
+           background-color: $color-10;
+
+           a {
+               &::before{
+                   color: $color-12;
+               }
+           }
        }
    }
 
@@ -121,6 +177,20 @@ main {
            background-color: $color-13;
            border: 7px solid $color-14;
            color: $color-15;
+       }
+
+       &.solid {
+           background-color: $color-13;
+
+           p {
+               color: $color-18;
+           }
+
+           a {
+               &::before{
+                   color: $color-17;
+               }
+           }
        }
    }
 }
